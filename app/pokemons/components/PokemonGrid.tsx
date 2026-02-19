@@ -10,18 +10,16 @@ interface Props {
 export const PokemonGrid = ({pokemons}: Props) => {
     
   return (
-    <div className="grid w-full gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center">
-
-          {
-               pokemons.map((pokemon) => (
-               
-                <PokemonCard key={ pokemon.id } pokemon={pokemon}/>
-                
-
-                
-              ))
-
-         }
+    <div className="flex flex-wrap gap-10 items-center justify-center">
+        {
+          pokemons.map((pokemon) => (
+            <PokemonCard key={pokemon.id} pokemon={pokemon}/>
+         
+            
+        
+          ))
+        }
+        
     </div>
     
  
