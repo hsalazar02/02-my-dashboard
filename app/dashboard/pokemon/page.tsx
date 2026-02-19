@@ -1,5 +1,5 @@
 // funcion asincorna porque es Http  limit el numero que vamos a pemitir que trae la consulta y offset de donde comenzamos
-import Image from "next/image";
+
 
 import { PokemonGrid, PokemonsResponse, SimplePokemon } from "@/app/pokemons";
 
@@ -25,12 +25,10 @@ export default async function PokemonsPage() {
   const pokemons = await getPokemons();
 
   return (
-    <div className="flex flex-col items-center w-full px-4 py-6 overflow-x-hidden">
-
-      {/* TITULO */}
-      <h1 className="w-full text-center text-4xl font-semibold mb-6">
-        Listado de Pokémons <small className="text-xl font-normal">estático</small>
-      </h1>
+    <div className="w-full px-4 py-6">
+    <h1 className="w-full text-center text-4xl font-semibold mb-6">
+      Listado de Pokémons <small className="text-xl font-normal">estático</small>
+    </h1>
 
         {/* aqui estamos llamando al componente que creamos en pokemongrid, y le mandmos lo que generamos en el arreglo que tomo el api que esta arriba */}
         <PokemonGrid pokemons={pokemons}/>

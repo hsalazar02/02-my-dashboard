@@ -9,7 +9,7 @@ interface Props {
 
 
 
-export const CartCounter = ({ value = 10 }) => {
+export const CartCounter = ({ value = 0 }) => {
     const [count, setCount] = useState(value)
   return (
   <>
